@@ -23,8 +23,8 @@
         
                 // Connect to the database
                 $servername = "localhost";
-                $username = "DimaxKun"; 
-                $password = "Dimaxtime123"; 
+                $username = "root"; 
+                $password = ""; 
                 $dbname = "search_db"; // The database we created earlier
         
                 // Create a connection
