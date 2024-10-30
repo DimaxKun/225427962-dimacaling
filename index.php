@@ -7,7 +7,7 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
     <title>Phonebook</title>
     <link rel="stylesheet" href="styles.css">
 </head>
