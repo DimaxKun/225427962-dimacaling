@@ -48,6 +48,6 @@ $result = $conn->query($sql);
         ?>
     </table>
     <br>
-    <a href="add.php">Add New Contact</a>
+    <button onclick="window.location.href='add.php'">Add New Contact</button>
 </body>
 </html>
