@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         Name: <input type="text" name="name" value="<?php echo $name; ?>"><br><br>
         Phone: <input type="text" name="phone" value="<?php echo $phone; ?>"><br><br>
-        <input type="submit" value="Update Contact">
+        <input type="submit" value="Update Contact"><br><br>
     </form>
     <a href="index.php">Back to Phonebook</a>
 </body>

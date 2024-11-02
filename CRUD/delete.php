@@ -11,9 +11,5 @@
         } else {
             echo "Error deleting record." . $sql . "<br>" . $conn->error;
         }
-
-
     }
-
-    header("Location: index.php");
 ?> 

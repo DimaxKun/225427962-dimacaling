@@ -1,6 +1,14 @@
 <?php
 include 'db.php';
 
+// Check if delete form was submitted
+if (isset($_POST['delete_id'])) {
+    $id = $_POST['delete_id'];
+    $sql = "DELETE FROM contacts WHERE id = $id";
+    $conn->query($sql);
+}
+
+// Retrieve the updated list of contacts
 $sql = "SELECT * FROM contacts";
 $result = $conn->query($sql);
 ?>
@@ -17,7 +25,7 @@ $result = $conn->query($sql);
         <tr>
             <th>Name</th>
             <th>Phone</th>
-            <th>Action</th>
+            <th colspan="2">Action</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
@@ -25,12 +33,17 @@ $result = $conn->query($sql);
                 echo "<tr>";
                 echo "<td>" . $row['name'] . "</td>";
                 echo "<td>" . $row['phone'] . "</td>";
-                echo "<td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>";
-                echo "<td><a href='edit.php?id=" . $row['id'] . "'>Edit</a></td>";
+                echo "<td>
+                        <form method='POST' action='index.php' style='display:inline;'>
+                            <input type='hidden' name='delete_id' value='" . $row['id'] . "'>
+                            <input type='submit' value='Delete' class='delete-button'>
+                        </form>
+                    </td>";        
+                echo "<td><a href='edit.php?id=" . $row['id'] . "' class='button-link'>Edit</a></td>";
                 echo "</tr>";
             }
         } else {
-            echo "<tr><td colspan='3'>No contacts found.</td></tr>";
+            echo "<tr><td colspan='4'>No contacts found.</td></tr>";
         }
         ?>
     </table>

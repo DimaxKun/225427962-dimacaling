@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" action="add.php">
         Name: <input type="text" name="name"><br><br>
         Phone: <input type="text" name="phone"><br><br>
-        <input type="submit" value="Add Contact">
+        <input type="submit" value="Add Contact"><br><br>
     </form>
     <a href="index.php">Back to Phonebook</a>
 </body>
