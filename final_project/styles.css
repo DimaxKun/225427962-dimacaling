@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f7f9fc;
+    background-color: #eefffc;
     color: #333;
     line-height: 1.6;
 }
@@ -177,6 +177,18 @@ footer {
 
     .testimonials-slider {
         gap: 1rem;
+    }
+
+    .cta {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .cta .cta-button {
+        margin: 0.5rem 0; /* Add vertical spacing */
+        width: 50%; /* Ensure buttons are not too wide */
+        text-align: center;
     }
 }
 
