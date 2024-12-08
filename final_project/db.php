@@ -119,7 +119,7 @@ foreach ($tables as $table_sql) {
         echo "Error creating table: " . $conn->error . "<br>";
     }
 }
-
+e
 // Close the connection
 $conn->close();
 echo "<br>Setup completed successfully.";
